@@ -29,7 +29,7 @@ const lista_mastodon = [
 
 
 lista_mastodon.forEach((dominio) => {
-    fetch(`https:/${dominio}/api/v1/instance`).then((result) => 
+    fetch(`https://${dominio}/api/v1/instance`).then((result) => 
         result.json()
     ).then((servidor) => {
         let tarjeta = "<div class=tarjeta>"
