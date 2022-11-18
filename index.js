@@ -21,8 +21,8 @@ const lista_mastodon = [
     "lile.cl",
     "col.social",
     "malaga.social",
-    "social.ferrocarril.es",
-    "sivar.cafe ",
+    "social.ferrocarril.net",
+    "sivar.cafe",
     "mastodon.cr",
     "owo.cafe",
 ]
