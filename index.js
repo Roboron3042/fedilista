@@ -1,59 +1,81 @@
 const lista_mastodon = [
-    "masto.es",
-    "mastodon.la",
-    "social.politicaconciencia.org",
-    "masto.nobigtech.es",
-    "tkz.one",
-    "laterracita.online",
-    "viajes.social",
-    "federa.social",
-    "txs.es",
-    "seda.social",
-    "social.dexzone.es",
-    "comunidad.nvda.es",
-    "mst.universoalterno.es",
-    "xarxa.cloud",
-    "libertalia.world",
-    "tuiter.rocks",
-    "masto.rocks",
-    "mstdn.mx",
     "mastodon.uy",
-    "lile.cl",
-    "col.social",
-    "malaga.social",
-    "social.ferrocarril.net",
+    "chilemasto.casa",
+    "mstdn.es",
+    "mstdn.mx",
     "sivar.cafe",
+    "col.social",
+    "mastodonperu.xy",
+    "mastodon.la",
+    "mastodon.cl",
+    "seda.social",
+    "devschile.social",
+    "bizkaia.social",
+    "masto.nobigtech.es",
+    "masto.es",
+    "tkz.one",
+    "xarxa.cloud",
+    "culturaeinnovacion.social",
+    "sindicato.social",
+    "hispagatos.space",
+    "paquita.masto.host",
+    "loa.masto.host",
+    "mastodon.com.py",
+    "social.politicaconciencia.org",
+    "red.niboe.info",
+    "tuiter.rocks",
+    "txs.es",
+    "lile.cl",
+    "libertalia.world",
+    "mastodon.blaster.com.a",
+    "tuetue.org",
+    "fur.cl",
+    "bloom.surf",
+    "masto.komintern.work",
+    "malaga.social",
     "mastodon.cr",
-    "owo.cafe",
+    "oye.social",
+    "tubyte.xyz",
+    "rebel.ar",
 ]
+
+const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
 
 
 lista_mastodon.forEach((dominio) => {
     fetch(`https://${dominio}/api/v1/instance`).then((result) => 
         result.json()
     ).then((servidor) => {
-        let tarjeta = "<div class=tarjeta>"
-        tarjeta += '<img class=cabecera src="' + servidor.thumbnail + '"/>'
+        let tarjeta = '<div class="tarjeta">'
+        tarjeta += '<img class=cabecera src="' + servidor.thumbnail + '"' + ' onerror="null; this.src=\'https://files.mastodon.social/site_uploads/files/000/000/001/@1x/57c12f441d083cde.png\'"/>'
         tarjeta += '<div class=contenido>'
-        tarjeta += '<a href="https://' + servidor.uri + '" target="_blank">' + servidor.uri + "</a>"
-        tarjeta += "<p>" + servidor.short_description + "</p>"
-        tarjeta += "<div class=info>"
-        tarjeta += '<div>'
-        tarjeta += "Registros: " + (servidor.registrations ? "Abiertos" : "Cerrados" );
-        tarjeta += "</br>Aprobación: " + (servidor.approval_required ? "Manual" : "Automática" )
+        tarjeta += '<a class="titulo" href="https://' + servidor.uri + '" target="_blank">'
+        tarjeta += '<img class="icono-servidor" src="./assets/mastodon.png" alt="Mastodon" />'
+        tarjeta += servidor.uri + '</a>'
+        tarjeta += '<p class="descripcion">' + servidor.short_description + "</p>"
+        tarjeta += '<div class=info>'
+        tarjeta += '<div style="flex-basis:40%">'
+        tarjeta += '<div style="display:flex;">'
+        tarjeta += '<span style="width:7rem;">Registros:</span>'
+        tarjeta += '<span>' + (servidor.registrations ? '🔓 Abiertos' : '🔒 Cerrados' ) + '</span>'
         tarjeta += '</div>' //registro
         tarjeta += '<div style="display:flex;">'
+        tarjeta += '<span style="width:7rem;">Aprobación:</span>' 
+        tarjeta += '<span>' + (servidor.approval_required ? '✋ Manual' : '🤖 Automática' ) + '</span>'
+        tarjeta += '</div>' //aprobacion
+        tarjeta += '</div>' //registro+aprobacion
+        tarjeta += '<div style="display:flex;flex-basis:60%;">'
         tarjeta += '<img class=avatar src="' + servidor.contact_account.avatar + '"/>'
         tarjeta += '<div>'
-        tarjeta += "Administrado por: " + (servidor.contact_account.display_name != '' ?
-                    servidor.contact_account.display_name :
+        tarjeta += 'Administrado por: ' + (servidor.contact_account.display_name != '' ?
+                    limpiar_emojis(servidor.contact_account.display_name) :
                     servidor.contact_account.username );
         tarjeta += '</br>Correo: <a href=mailto:' + servidor.email + '" >' + servidor.email + "</a>"
         tarjeta += '</div>' //contacto
         tarjeta += '</div>' //admin
         tarjeta += '</div>' //info
         tarjeta += '</div>' //contenido
-        tarjeta += "</div>" //tarjeta
+        tarjeta += '</div>' //tarjeta
         document.getElementById("mastodon").innerHTML += tarjeta
     }).catch(function (err) {
         console.warn('Algo falló', err);

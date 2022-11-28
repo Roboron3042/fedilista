@@ -1,20 +1,30 @@
+html {
+    background: #1a1a3e;
+}
+
 .cabecera {
     max-width: 300px;
     max-height: 160px;
+    border-radius: 0.25rem;
 }
 .contenido {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0.5rem 1rem;
+}
+.icono-servidor {
+    max-width: 1rem;
+    margin-right: 0.5rem;
 }
 .tarjeta {
     display: flex;
-    border: 1px solid gray;
+    border: 1px solid white;
+    border-radius: 0.5rem;
     margin: auto;
     margin-bottom: 2rem;
+    background: white;
 }
 .avatar {
     max-height: 3rem;
@@ -29,6 +39,12 @@
     .tarjeta {
         flex-direction: column;
         align-items: center;
+    }
+    .titulo {
+        text-align: center;
+    }
+    .contenido {
+        padding: 0rem 2rem;
     }
 }
 
