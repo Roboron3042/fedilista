@@ -40,6 +40,7 @@ const lista_mastodon = [
     "espod.social",
     "mastodon.lajaqueria.org",
     "soymas.to",
+    "mst.universoalterno.es",
 ]
 
 const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
