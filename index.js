@@ -37,6 +37,7 @@ const lista_mastodon = [
     "oye.social",
     "tubyte.xyz",
     "rebel.ar",
+    "espod.social",
 ]
 
 const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
