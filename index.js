@@ -35,7 +35,7 @@ const lista_mastodon = [
     "malaga.social",
     "mastodon.cr",
     "oye.social",
-    "tubyte.xyz",
+    "mastodonte.club",
     "rebel.ar",
     "espod.social",
     "mastodon.lajaqueria.org",
