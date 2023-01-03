@@ -41,6 +41,10 @@ const lista_mastodon = [
     "mastodon.lajaqueria.org",
     "soymas.to",
     "mst.universoalterno.es",
+    "frikiverse.zone",
+    "shrimply.social",
+    "mast.lat",
+    "mastodonperu.xyz",
 ]
 
 const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
