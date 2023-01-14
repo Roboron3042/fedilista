@@ -45,6 +45,7 @@ const lista_mastodon = [
     "shrimply.social",
     "mast.lat",
     "mastodonperu.xyz",
+    "fediunam.site",
 ]
 
 const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
