@@ -24,7 +24,6 @@ const lista_mastodon = [
     "tuiter.rocks",
     "txs.es",
     "lile.cl",
-    "mastodon.blaster.com.ar",
     "bloom.surf",
     "masto.komintern.work",
     "malaga.social",
