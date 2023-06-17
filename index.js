@@ -49,7 +49,6 @@ const lista_mastodon = [
     "jvm.social",
     "mastodonte.tech",
     "oye.social",
-    "xarxa.cloud",
     "hispagatos.space",
     "mastodon.escepticos.es",
     "mastodon.mx",
