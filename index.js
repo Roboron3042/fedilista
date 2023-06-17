@@ -48,8 +48,6 @@ const lista_mastodon = [
     "tu.social",
     "jvm.social",
     "mastodonte.tech",
-    "oye.social",
-    "hispagatos.space",
     "mastodon.escepticos.es",
     "mastodon.mx",
     "ticos.social",
