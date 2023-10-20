@@ -38,13 +38,11 @@ const lista_mastodon = [
     "mast.lat",
     "fediunam.site",
     "mastorol.es",
-    "cubatech.social",
     "laterracita.online",
     "41020.social",
     "naturar.social",
     "tu.social",
     "jvm.social",
-    "mastodonte.tech",
     "mastodon.escepticos.es",
     "mastodon.mx",
     "ticos.social",
@@ -55,6 +53,9 @@ const lista_mastodon = [
     "con.tar.mx",
     "cadiz.ovh",
     "irsoluciones.social",
+	"mastodon.denibol.com",
+	"mastodonte.red",
+	"fedi.lat",
 ]
 
 const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
