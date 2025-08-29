@@ -12,7 +12,6 @@ const lista_mastodon = [
     "xarxa.cloud",
     "sindicato.social",
     "hispagatos.space",
-    "paquita.masto.host",
     "social.politicaconciencia.org",
     "tuiter.rocks",
     "txs.es",
@@ -35,13 +34,14 @@ const lista_mastodon = [
     "ticos.social",
     "mastodon.blaster.com.ar",
     "terere.social",
-	"mastodon.denibol.com",
-	"fedi.lat",
+    "mastodon.denibol.com",
+    "fedi.lat",
     "boriken.social",
     "hortensia.social",
     "anda.lu",
-    "maquilishuat.social",
-	"social.caparazondigital.net",
+    "ahsocial.ar",
+    "social.caparazondigital.net",
+    "neopaquita.es",
 ]
 
 const limpiar_emojis = (cadena) => cadena.replace(/:.*/, '');
